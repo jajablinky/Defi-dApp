@@ -1,15 +1,16 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 const LandingPage = () => {
   return (
-    <header className="landing--container">
-      <div className="nav--container">
-        <nav>
-          <NavLink>dydx</NavLink>
-        </nav>
+    <main>
+      <div className="main--container">
+        <span className="bg-image--container">
+          <span className="bg-image-glimmer"></span>
+          <span className="bg-image-glimmer-1"></span>
+          <span className="bg-image-unicorn"></span>
+        </span>
       </div>
-    </header>
+    </main>
   );
 };
 

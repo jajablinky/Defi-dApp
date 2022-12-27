@@ -1,9 +1,182 @@
-#root {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 2rem;
+/*------------*/
+
+/*
+          FULL PROJECT
+*/
+
+/*------------*/
+
+html {
+  box-sizing: border-box;
+  --bg: #191b1f;
+  background-color: var(--bg);
 }
 
-.nav {
-  text-align: left;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  border: 0 solid;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-transform: translateX(var(--tw-translate-x))
+    translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
+    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+    scaleY(var(--tw-scale-y));
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 229, 229, var(--tw-border-opacity));
+  --tw-shadow: 0 0 #0000;
+  --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59, 130, 246, 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-blur: var(--tw-empty, /*!*/ /*!*/);
+  --tw-brightness: var(--tw-empty, /*!*/ /*!*/);
+  --tw-contrast: var(--tw-empty, /*!*/ /*!*/);
+  --tw-grayscale: var(--tw-empty, /*!*/ /*!*/);
+  --tw-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
+  --tw-invert: var(--tw-empty, /*!*/ /*!*/);
+  --tw-saturate: var(--tw-empty, /*!*/ /*!*/);
+  --tw-sepia: var(--tw-empty, /*!*/ /*!*/);
+  --tw-drop-shadow: var(--tw-empty, /*!*/ /*!*/);
+  --tw-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+  --tw-backdrop-blur: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-brightness: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-contrast: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-grayscale: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-invert: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-opacity: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-saturate: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-sepia: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+    var(--tw-backdrop-sepia);
+}
+
+#root {
+  margin: 0 auto;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+/*------------*/
+
+/*
+          HEADER SECTION
+*/
+
+/*------------*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 4rem;
+  width: 100%;
+  position: sticky;
+  backdrop-filter: blur(4px);
+  background: none;
+}
+
+.header--container {
+  justify-content: space-between;
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-item {
+  padding: 16px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  opacity: 0.6;
+}
+
+.launch-app {
+  padding: 8px 0.85rem;
+  margin-left: 16px;
+  text-decoration: none;
+  border-radius: 12px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(
+      95.5deg,
+      rgba(15, 53, 255, 0.3) 12.82%,
+      rgba(255, 72, 179, 0.3) 41.96%,
+      rgba(15, 53, 255, 0.08) 75.06%,
+      rgba(15, 53, 255, 0.11) 107.66%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: rgb(36, 226, 15) 1px 1000px 1px inset;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  width: fit-content !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  height: fit-content !important;
+}
+.active {
+  opacity: 1;
+}
+
+/*------------*/
+
+/*
+          MAIN SECTION
+*/
+
+/*------------*/
+
+.main--container {
+  padding: 1rem;
+  justify-content: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg-image--container {
+  width: 100vw;
+  height: 100vh;
+  max-height: 860px;
+  user-select: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -2;
+  position: absolute;
+  margin-top: -60px;
+}
+
+.bg-image-glimmer-1 {
+  height: 100%;
+  left: 0px;
+  mix-blend-mode: lighten;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: -1;
+  mask-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.4));
+  background: url(../images/Rectangle-1.svg) 0% 0% / cover no-repeat;
+  background-repeat: no-repeat;
 }
